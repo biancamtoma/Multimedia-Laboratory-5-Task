@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Canvas Chart</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<div class="controls">
+    <button id="toggleBtn">Pause</button>
+    <button id="resetBtn">Reset</button>
+    <button id="exportBtn">Export PNG</button>
+
+ <label>
+    Speed:
+    <input type="range" id="speedRange" min="0" max="1800" step="100" value="800">
+</label>
+
+
+    <label>
+        <input type="checkbox" id="gridToggle" checked>
+        Show Grid
+    </label>
+
+    <select id="themeSelect">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</div>
+
+<div class="stats">
+    <p>Current: <span id="currentValue">-</span></p>
+    <p>Min: <span id="minValue">-</span></p>
+    <p>Max: <span id="maxValue">-</span></p>
+    <p>Average: <span id="avgValue">-</span></p>
+</div>
+
+<canvas id="chartCanvas" width="900" height="600"></canvas>
+
+<script src="scripts/chart.js"></script>
+</body>
+</html>
